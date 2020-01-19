@@ -1,4 +1,4 @@
-defmodule Wirebuild.Guardian do
+defmodule Wirebuild.Account.Guardian do
   use Guardian, otp_app: :wirebuild
 
   alias Wirebuild.Account
