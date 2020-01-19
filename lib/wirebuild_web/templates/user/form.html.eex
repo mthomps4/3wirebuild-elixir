@@ -1,0 +1,54 @@
+<%= form_for @changeset, @action, fn f -> %>
+  <%= if @changeset.action do %>
+    <div class="alert alert-danger">
+      <p>Oops, something went wrong! Please check the errors below.</p>
+    </div>
+  <% end %>
+
+  <%= label f, :first_name %>
+  <%= text_input f, :first_name %>
+  <%= error_tag f, :first_name %>
+
+  <%= label f, :last_name %>
+  <%= text_input f, :last_name %>
+  <%= error_tag f, :last_name %>
+
+  <%= label f, :username %>
+  <%= text_input f, :username %>
+  <%= error_tag f, :username %>
+
+  <%= label f, :password %>
+  <%= text_input f, :password %>
+  <%= error_tag f, :password %>
+
+  <h3> Social Profile <i>(Optional)</i></h3>
+  <%= inputs_for f, :social_profile, fn sp -> %>
+  <%= label sp, :dev_to %>
+  <%= text_input sp, :dev_to %>
+  <%= error_tag sp, :dev_to %>
+
+  <%= label sp, :medium %>
+  <%= text_input sp, :medium %>
+  <%= error_tag sp, :medium %>
+
+  <%= label sp, :twitter %>
+  <%= text_input sp, :twitter %>
+  <%= error_tag sp, :twitter %>
+
+  <%= label sp, :github %>
+  <%= text_input sp, :github %>
+  <%= error_tag sp, :github %>
+
+  <%= label sp, :email %>
+  <%= text_input sp, :email %>
+  <%= error_tag sp, :email %>
+
+  <%= label sp, :company %>
+  <%= text_input sp, :company %>
+  <%= error_tag sp, :company %>
+  <% end %>
+
+  <div>
+    <%= submit "Save" %>
+  </div>
+<% end %>
