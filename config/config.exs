@@ -25,7 +25,7 @@ config :logger, :console,
 # Use Jason for JSON parsing in Phoenix
 config :phoenix, :json_library, Jason
 
-config :wirebuild, Wirebuild.Guardian,
+config :wirebuild, Wirebuild.Account.Guardian,
   issuer: "wirebuild_api",
   secret_key: "phNYS0GAoLq2Xoa9qNEf6lCD9AtZB5SSvWJlOhH0X4vScRaXz6hM90iF52T6F30f"
 

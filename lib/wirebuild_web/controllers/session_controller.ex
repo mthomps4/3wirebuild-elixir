@@ -27,8 +27,8 @@ defmodule WirebuildWeb.SessionController do
   defp login_reply({:ok, user}, conn) do
     conn
     |> put_flash(:info, "Welcome back!")
-    |> Guardian.Plug.sign_in(Guardian, user)
-    |> redirect(to: "/users")
+    |> Guardian.Plug.sign_in(user)
+    |> redirect(to: "/protected")
   end
 
   defp login_reply({:error, reason}, conn) do
